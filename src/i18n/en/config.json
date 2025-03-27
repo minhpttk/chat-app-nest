@@ -1,0 +1,11 @@
+{
+    "validation": {
+      "EMAIL_REQUIRED": "Email is required",
+      "PASSWORD_REQUIRED": "Password is required",
+      "FULLNAME_REQUIRED": "Full name is required",
+      "INVALID_EMAIL": "Invalid email format",
+      "INVALID_PASSWORD": "Invalid password format",
+      "INVALID_FULLNAME": "Invalid full name format"
+    },
+    "HELLO": "Hello"
+  }

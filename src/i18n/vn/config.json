@@ -1,0 +1,6 @@
+{
+    "EMAIL_REQUIRED": "Vui lòng nhập email",
+    "PASSWORD_REQUIRED": "Vui lòng nhập mật khẩu",
+    "FULLNAME_REQUIRED": "Vui lòng nhập họ tên",
+    "HELLO": "Xin chào"
+  }
