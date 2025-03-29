@@ -6,6 +6,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserEntity } from './entities/user.enntity';
 import { UsersModule } from './module/users/users.module';
 import { SharedModule } from './shared/shared.module';
+import { EmailModule } from './service_api/email/email.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { SharedModule } from './shared/shared.module';
 
     UsersModule,
     SharedModule,
+    EmailModule,
   ],
   controllers: [AppController],
   providers: [AppService],

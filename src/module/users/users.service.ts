@@ -4,6 +4,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from 'src/entities/user.enntity';
 import { Repository } from 'typeorm';
+import { EmailService } from 'src/service_api/email/email.service';
 
 @Injectable()
 export class UsersService {
@@ -11,6 +12,7 @@ export class UsersService {
   constructor(
     @InjectRepository(UserEntity)
     private usersRepository: Repository<UserEntity>,
+    private readonly emailService: EmailService, // Inject the EmailService here
   ) {}
 
   async create(createUserDto: CreateUserDto): Promise<UserEntity> {
@@ -34,5 +36,13 @@ export class UsersService {
 
   remove(id: number) {
     return `This action removes a #${id} user`;
+  }
+
+  sendEmail(email: string) {
+    if (!email) {
+      throw new Error('Email is required');
+    }
+
+    return this.emailService.sendWelcomeEmail(email);
   }
 }
